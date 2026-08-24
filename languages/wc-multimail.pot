@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MultiMail 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-24 00:00-0300\n"
+"PO-Revision-Date: 2026-08-24 00:00-0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: scripts/generate-plugin-translations.py\n"
+
+#: wc-multimail/wc-multimail.php:141
+msgid "Admin"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:305
+msgid "Class"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:137
+msgid "Customer"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:303
+msgid "Email"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php
+msgid "Email plugin"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:289 wc-multimail/wc-multimail.php:307
+msgid "From email"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:285 wc-multimail/wc-multimail.php:306
+msgid "From name"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:282
+msgid "Global sender defaults"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:295
+msgid "Leave a field empty to inherit the global sender defaults."
+msgstr ""
+
+#: wc-multimail/wc-multimail.php
+msgid "MultiMail"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:144
+msgid "Other"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:334
+msgid "Save settings"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:304
+msgid "Sent to"
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:275
+msgid "Set the sender name and sender email globally, or override them per WooCommerce transactional email."
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:298
+msgid "WooCommerce is not available yet, so no transactional email list can be shown."
+msgstr ""
+
+#: wc-multimail/wc-multimail.php:294
+msgid "WooCommerce transactional email overrides"
+msgstr ""

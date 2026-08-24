@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MultiMail 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-24 00:00-0300\n"
+"PO-Revision-Date: 2026-08-24 00:00-0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: scripts/generate-plugin-translations.py\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: wc-multimail/wc-multimail.php:141
+msgid "Admin"
+msgstr "Administrador"
+
+#: wc-multimail/wc-multimail.php:305
+msgid "Class"
+msgstr "Classe"
+
+#: wc-multimail/wc-multimail.php:137
+msgid "Customer"
+msgstr "Cliente"
+
+#: wc-multimail/wc-multimail.php:303
+msgid "Email"
+msgstr "E-mail"
+
+#: wc-multimail/wc-multimail.php
+msgid "Email plugin"
+msgstr "Plugin de e-mail"
+
+#: wc-multimail/wc-multimail.php:289 wc-multimail/wc-multimail.php:307
+msgid "From email"
+msgstr "E-mail do remetente"
+
+#: wc-multimail/wc-multimail.php:285 wc-multimail/wc-multimail.php:306
+msgid "From name"
+msgstr "Nome do remetente"
+
+#: wc-multimail/wc-multimail.php:282
+msgid "Global sender defaults"
+msgstr "Padrões globais do remetente"
+
+#: wc-multimail/wc-multimail.php:295
+msgid "Leave a field empty to inherit the global sender defaults."
+msgstr "Deixe um campo vazio para herdar os padrões globais do remetente."
+
+#: wc-multimail/wc-multimail.php
+msgid "MultiMail"
+msgstr "MultiMail"
+
+#: wc-multimail/wc-multimail.php:144
+msgid "Other"
+msgstr "Outro"
+
+#: wc-multimail/wc-multimail.php:334
+msgid "Save settings"
+msgstr "Salvar configurações"
+
+#: wc-multimail/wc-multimail.php:304
+msgid "Sent to"
+msgstr "Enviado para"
+
+#: wc-multimail/wc-multimail.php:275
+msgid "Set the sender name and sender email globally, or override them per WooCommerce transactional email."
+msgstr "Defina globalmente o nome e o e-mail do remetente ou substitua-os por e-mail transacional do WooCommerce."
+
+#: wc-multimail/wc-multimail.php:298
+msgid "WooCommerce is not available yet, so no transactional email list can be shown."
+msgstr "O WooCommerce ainda não está disponível; a lista de e-mails transacionais não pode ser exibida."
+
+#: wc-multimail/wc-multimail.php:294
+msgid "WooCommerce transactional email overrides"
+msgstr "Substituições de e-mails transacionais do WooCommerce"

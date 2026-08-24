@@ -5,11 +5,16 @@
  * Version: 0.1.0
  * Author: Jv Secate
  * Text Domain: wc-multimail
+ * Domain Path: /languages
  */
 
 defined( 'ABSPATH' ) || exit;
 
 define( 'WCMULTIMAIL_OPTION', 'wc_multimail_settings' );
+
+add_action( 'plugins_loaded', function () {
+	load_plugin_textdomain( 'wc-multimail', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}, 0 );
 
 function wc_multimail_env( $key, $default = '' ) {
 	$secret_file = getenv( $key . '_FILE' );
@@ -129,14 +134,14 @@ function wc_multimail_get_email_audience_label( $email_id ) {
 	$email_id = sanitize_key( $email_id );
 
 	if ( 0 === strpos( $email_id, 'customer_' ) || in_array( $email_id, array( 'customer_new_account', 'customer_note', 'customer_invoice', 'customer_reset_password', 'customer_abandoned_cart_recovery', 'customer_review_request', 'customer_verify_email', 'customer_fulfillment_deleted', 'customer_pos_completed_order', 'customer_pos_refunded_order' ), true ) ) {
-		return 'Customer';
+		return __( 'Customer', 'wc-multimail' );
 	}
 
 	if ( in_array( $email_id, array( 'new_order', 'cancelled_order', 'failed_order', 'admin_payment_gateway_enabled', 'low_stock', 'no_stock' ), true ) ) {
-		return 'Admin';
+		return __( 'Admin', 'wc-multimail' );
 	}
 
-	return 'Other';
+	return __( 'Other', 'wc-multimail' );
 }
 
 function wc_multimail_get_global_from_name() {
@@ -267,39 +272,39 @@ function wc_multimail_render_settings_page() {
 	?>
 	<div class="wrap">
 		<h1>WC MultiMail</h1>
-		<p>Set the sender name and sender email globally, or override them per WooCommerce transactional email.</p>
+		<p><?php esc_html_e( 'Set the sender name and sender email globally, or override them per WooCommerce transactional email.', 'wc-multimail' ); ?></p>
 
 		<?php settings_errors(); ?>
 
 		<form method="post" action="options.php">
 			<?php settings_fields( 'wc_multimail_settings_group' ); ?>
 
-			<h2>Global sender defaults</h2>
+			<h2><?php esc_html_e( 'Global sender defaults', 'wc-multimail' ); ?></h2>
 			<table class="form-table" role="presentation">
 				<tr>
-					<th scope="row"><label for="wc_multimail_global_from_name">From name</label></th>
+					<th scope="row"><label for="wc_multimail_global_from_name"><?php esc_html_e( 'From name', 'wc-multimail' ); ?></label></th>
 					<td><input name="<?php echo esc_attr( WCMULTIMAIL_OPTION ); ?>[global_from_name]" id="wc_multimail_global_from_name" type="text" class="regular-text" value="<?php echo esc_attr( $settings['global_from_name'] ); ?>" /></td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="wc_multimail_global_from_address">From email</label></th>
+					<th scope="row"><label for="wc_multimail_global_from_address"><?php esc_html_e( 'From email', 'wc-multimail' ); ?></label></th>
 					<td><input name="<?php echo esc_attr( WCMULTIMAIL_OPTION ); ?>[global_from_address]" id="wc_multimail_global_from_address" type="email" class="regular-text" value="<?php echo esc_attr( $settings['global_from_address'] ); ?>" /></td>
 				</tr>
 			</table>
 
-			<h2>WooCommerce transactional email overrides</h2>
-			<p>Leave a field empty to inherit the global sender defaults.</p>
+			<h2><?php esc_html_e( 'WooCommerce transactional email overrides', 'wc-multimail' ); ?></h2>
+			<p><?php esc_html_e( 'Leave a field empty to inherit the global sender defaults.', 'wc-multimail' ); ?></p>
 
 			<?php if ( empty( $emails ) ) : ?>
-				<p>WooCommerce is not available yet, so no transactional email list can be shown.</p>
+				<p><?php esc_html_e( 'WooCommerce is not available yet, so no transactional email list can be shown.', 'wc-multimail' ); ?></p>
 			<?php else : ?>
 				<table class="widefat striped">
 					<thead>
 						<tr>
-							<th>Email</th>
-							<th>Sent to</th>
-							<th>Class</th>
-							<th>From name</th>
-							<th>From email</th>
+							<th><?php esc_html_e( 'Email', 'wc-multimail' ); ?></th>
+							<th><?php esc_html_e( 'Sent to', 'wc-multimail' ); ?></th>
+							<th><?php esc_html_e( 'Class', 'wc-multimail' ); ?></th>
+							<th><?php esc_html_e( 'From name', 'wc-multimail' ); ?></th>
+							<th><?php esc_html_e( 'From email', 'wc-multimail' ); ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -326,7 +331,7 @@ function wc_multimail_render_settings_page() {
 				</table>
 			<?php endif; ?>
 
-			<?php submit_button( 'Save settings' ); ?>
+			<?php submit_button( __( 'Save settings', 'wc-multimail' ) ); ?>
 		</form>
 	</div>
 	<?php
